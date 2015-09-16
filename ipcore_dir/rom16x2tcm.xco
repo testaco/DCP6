@@ -1,0 +1,48 @@
+##############################################################
+##############################################################
+##############################################################
+SET addpads = false
+SET asysymbol = true
+SET createndf = false
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET removerpms = false
+SET simulationfiles = Behavioral
+SET workingdirectory = ./tmp/
+SET designentry = Verilog
+SET BusFormat = BusFormatAngleBracketNotRipped
+SET devicefamily = spartan6
+SET device = xc6slx25
+SET package = ftg256
+SET speedgrade = -2
+SET FlowVendor = Foundation_ISE
+SET VerilogSim = True
+SET VHDLSim = True
+SELECT Distributed_Memory_Generator family Xilinx,_Inc. 5.1
+CSET ce_overrides=ce_overrides_sync_controls
+CSET coefficient_file="C:\Documents and Settings\DCP6\rom16x2tcm.coe"
+CSET common_output_ce=false
+CSET common_output_clk=false
+CSET component_name=rom16x2tcm
+CSET data_width=2
+CSET default_data=0
+CSET default_data_radix=10
+CSET depth=16
+CSET dual_port_address=non_registered
+CSET dual_port_output_clock_enable=false
+CSET input_clock_enable=false
+CSET input_options=non_registered
+CSET memory_type=rom
+CSET output_options=non_registered
+CSET pipeline_stages=0
+CSET qualify_we_with_i_ce=false
+CSET reset_qdpo=false
+CSET reset_qsdpo=false
+CSET reset_qspo=false
+CSET simple_dual_port_address=non_registered
+CSET simple_dual_port_output_clock_enable=false
+CSET single_port_output_clock_enable=false
+CSET sync_reset_qdpo=false
+CSET sync_reset_qsdpo=false
+CSET sync_reset_qspo=false

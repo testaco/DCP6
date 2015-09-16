@@ -1,0 +1,245 @@
+#PACE: Start of Constraints for DCP-6
+CONFIG VCCAUX = "3.3" ;
+NET "CLK" PERIOD = 12.5 ns ;
+# LED and test registers are not critical
+NET "tdcd" TIG ;
+NET "tfcda" TIG ;
+NET "tfcdb" TIG ;
+NET "redreg" TIG ;
+NET "grnreg" TIG ;
+#NET "pttreg" TIG ;
+# T/R switch and modem configuration occur when reset
+NET "modem1/nfl" TIG ;
+NET "modem1/sfs" TIG ;
+NET "modem1/dly<*" TIG ;
+NET "modem1/cre" TIG ;
+NET "modem1/tre" TIG ;
+NET "modem1/ssb" TIG ;
+NET "modem1/fm" TIG ;
+NET "modem1/bfofrq<*" TIG ;
+NET "modem1/xmt" TIG ;
+NET "modem1/ptt" TIG ;
+NET "modem2/nfl" TIG ;
+NET "modem2/sfs" TIG ;
+NET "modem2/dly<*" TIG ;
+NET "modem2/cre" TIG ;
+NET "modem2/tre" TIG ;
+NET "modem2/ssb" TIG ;
+NET "modem2/fm" TIG ;
+NET "modem2/bfofrq<*" TIG ;
+NET "modem2/xmt" TIG ;
+NET "modem2/ptt" TIG ;
+# UART I/O delays OK
+NET "uart0/rxd0" TIG ;
+NET "uart0/txd0" TIG ;
+# ignore delays between MCLK and RCLK clock domains
+NET "enet/sdata<*" TIG ;
+NET "enet/synwr/t" TIG ;
+NET "enet/synsof/t" TIG ;
+NET "enet/synrxce/t" TIG ;
+NET "enet/syneof/t" TIG ;
+NET "enet/rxd8<*" TIG ;
+NET "enet/txe" TIG ;
+# ignore I2S I/O delays as 2.051 MHz serial data rate
+NET "afio/sfs0" TIG ;
+NET "afio/sdo0" TIG ;
+NET "afio/sdi0" TIG ;
+# ignore delays from ACLK to MCLK for I2S/CPU interface
+NET "afio/synt1/t" TIG ;
+NET "afio/synt2/t" TIG ;
+NET "afio/rhr<*" TIG ;
+NET "afio/thr1<*" TIG ;
+NET "afio/thr2<*" TIG ;
+# Tuner interface between internal and external clocks
+NET "fe1/syniowr/t" TIG ;
+NET "fe1/xmt" TIG ;
+NET "fe1/crst" TIG ;
+NET "fe2/syniowr/t" TIG ;
+NET "fe2/xmt" TIG ;
+NET "fe2/crst" TIG ;
+# Tuner configuration registers
+NET "fe1/frq0<*" TIG ;
+NET "fe1/frq1<*" TIG ;
+NET "fe2/frq0<*" TIG ;
+NET "fe2/frq1<*" TIG ;
+# FIR configuration registers
+NET "fe1/ncoef<*" TIG ;
+NET "fe1/acoef<*" TIG ;
+NET "fe1/dec<*" TIG ;
+NET "fe2/ncoef<*" TIG ;
+NET "fe2/acoef<*" TIG ;
+NET "fe2/dec<*" TIG ;
+# CIC configuration registers
+NET "fe1/ge<*" TIG ;
+NET "fe1/gf<*" TIG ;
+NET "fe1/n<*" TIG ;
+NET "fe2/ge<*" TIG ;
+NET "fe2/gf<*" TIG ;
+NET "fe2/n<*" TIG ;
+# use for -2 speed grade?
+#NET "fe1/ge_*" TIG ;
+#NET "fe2/ge_*" TIG ;
+# Noise blanker configuration registers
+NET "fe1/limit<*" TIG ;
+NET "fe2/limit<*" TIG ;
+# CIC output
+NET "fe1/cic/clpx<*" TIG ;
+NET "fe1/cic/clpy<*" TIG ;
+NET "fe1/cic/ovfx" TIG ;
+NET "fe1/cic/ovfy" TIG ;
+NET "fe2/cic/clpx<*" TIG ;
+NET "fe2/cic/clpy<*" TIG ;
+NET "fe2/cic/ovfx" TIG ;
+NET "fe2/cic/ovfy" TIG ;
+# NB output
+NET "fe1/nb/xo<*" TIG ;
+NET "fe1/nb/yo<*" TIG ;
+NET "fe1/nb/max<*" TIG ;
+NET "fe2/nb/xo<*" TIG ;
+NET "fe2/nb/yo<*" TIG ;
+NET "fe2/nb/max<*" TIG ;
+# FIR output
+NET "fe1/fir/macx/rnd<*" TIG ;
+NET "fe1/fir/macx/ovff" TIG ;
+NET "fe1/fir/macy/rnd<*" TIG ;
+NET "fe1/fir/macy/ovff" TIG ;
+NET "fe2/fir/macx/rnd<*" TIG ;
+NET "fe2/fir/macx/ovff" TIG ;
+NET "fe2/fir/macy/rnd<*" TIG ;
+NET "fe2/fir/macy/ovff" TIG ;
+# FIFO output
+NET "fe1/fifo/q<*" TIG ;
+NET "fe2/fifo/q<*" TIG ;
+# Tuner data input
+NET "fe1/syniv/t" TIG ;
+NET "fe1/fir/full" TIG ;
+NET "fe1/xi<*" TIG ;
+NET "fe1/yi<*" TIG ;
+NET "fe2/syniv/t" TIG ;
+NET "fe2/fir/full" TIG ;
+NET "fe2/xi<*" TIG ;
+NET "fe2/yi<*" TIG ;
+# Tuner data output
+NET "fe1/synov/t" TIG ;
+NET "fe1/xo<*" TIG ;
+NET "fe1/yo<*" TIG ;
+NET "fe2/synov/t" TIG ;
+NET "fe2/xo<*" TIG ;
+NET "fe2/yo<*" TIG ;
+# Tuner status
+NET "fe1/syniord/t" TIG ;
+NET "fe2/syniord/t" TIG ;
+NET "fe1/mixovff" TIG ;
+NET "fe1/cicovff" TIG ;
+NET "fe1/firovff" TIG ;
+NET "fe2/mixovff" TIG ;
+NET "fe2/cicovff" TIG ;
+NET "fe2/firovff" TIG ;
+# ADC status
+NET "synmax/t" TIG ;
+NET "adcovf" TIG ;
+NET "max/m<*" TIG ;
+# FFT status is asynchronous
+#NET "fft1/fftint" TIG ;
+#NET "fft2/fftint" TIG ;
+
+#PACE: Start of PACE I/O Pin Assignments
+# Frequency reference input
+NET "REF"  LOC = "A9" | IOSTANDARD = LVCMOS33 ;
+# Ethernet PHY
+NET "REFCLK"  LOC = "A4" | IOSTANDARD = LVCMOS18_JEDEC  | DRIVE = 16  | SLEW = FAST ;
+NET "TXD<0>"  LOC = "A11" | IOSTANDARD = LVCMOS18_JEDEC  | DRIVE = 8  | SLEW = FAST ;
+NET "TXD<1>"  LOC = "B12" | IOSTANDARD = LVCMOS18_JEDEC  | DRIVE = 8  | SLEW = FAST ;
+NET "TXV"  LOC = "B10" | IOSTANDARD = LVCMOS18_JEDEC  | DRIVE = 8  | SLEW = FAST ;
+NET "RXD<0>"  LOC = "A5" | IOSTANDARD = LVCMOS18_JEDEC ;
+NET "RXD<1>"  LOC = "B5" | IOSTANDARD = LVCMOS18_JEDEC ;
+#NET "RXER"  LOC = "A6" | IOSTANDARD = LVCMOS18_JEDEC ;
+NET "RXV"  LOC = "B6" | IOSTANDARD = LVCMOS18_JEDEC ;
+NET "MINT"  LOC = "A8" | IOSTANDARD = LVCMOS18_JEDEC ;
+NET "MDIO"  LOC = "A7" | IOSTANDARD = LVCMOS18_JEDEC  | DRIVE = 2  | SLEW = SLOW ;
+NET "MDC" LOC = "B8" | IOSTANDARD = LVCMOS18_JEDEC  | DRIVE = 2  | SLEW = SLOW ;
+NET "RSTN"  LOC = "A10" | IOSTANDARD = LVCMOS18_JEDEC  | DRIVE = 4  | SLEW = SLOW ;
+# TX I/O connector
+NET "IO<0>" LOC = "B16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "IO<1>" LOC = "C16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "IO<2>" LOC = "D16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "IO<3>" LOC = "E16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "IO<4>" LOC = "E15" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+# ALC (SS2=LSDAC, SS3=LSADC)
+NET "SCK2"  LOC = "F16" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+NET "SDI2"  LOC = "F15" | IOSTANDARD = LVCMOS33 ;
+NET "SDO2"  LOC = "H16" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+NET "SS2N"  LOC = "H14" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+NET "SS3N"  LOC = "G16" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+# DAC clock input and data output
+NET "CLK"  LOC = "J16" | IOSTANDARD = LVCMOS33 ;
+NET "CLK" IN_TERM = UNTUNED_SPLIT_75 ;
+NET "DAC<0>"  LOC = "T15" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<1>"  LOC = "R16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<2>"  LOC = "R15" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<3>"  LOC = "P16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<4>"  LOC = "P15" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<5>"  LOC = "N16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<6>"  LOC = "M15" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<7>"  LOC = "M16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<8>"  LOC = "L14" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<9>"  LOC = "L16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<10>"  LOC = "K15" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<11>"  LOC = "K16" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<12>"  LOC = "J14" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "DAC<13>"  LOC = "H15" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+# Flash Memory
+NET "SCK"  LOC = "R11" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "MISO"  LOC = "P10" | IOSTANDARD = LVCMOS33 ;
+NET "MOSI"  LOC = "T10" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "SSN"  LOC = "T3" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+NET "WPN"  LOC = "N12" | IOSTANDARD = LVCMOS33 ;
+NET "HLDN"  LOC = "P12" | IOSTANDARD = LVCMOS33 ;
+# Open-drain driver
+NET "PTT" LOC = "T8" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+# Red and green LEDs
+NET "REDLED" LOC = "T5" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "GRNLED" LOC = "T6" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+# Sigma-delta DAC for VCXO tuning
+NET "VCXO" LOC = "T4" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = FAST ;
+# ADC data and clock input
+#NET "ADC<0>"  LOC = "R1" | IOSTANDARD = LVCMOS18 ;
+#NET "ADC<1>"  LOC = "R2" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<2>"  LOC = "P1" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<3>"  LOC = "P2" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<4>"  LOC = "N1" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<5>"  LOC = "N3" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<6>"  LOC = "M1" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<7>"  LOC = "M2" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<8>"  LOC = "L1" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<9>"  LOC = "L3" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<10>"  LOC = "K1" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<11>"  LOC = "K2" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<12>"  LOC = "J1" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<13>"  LOC = "J3" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<14>"  LOC = "H1" | IOSTANDARD = LVCMOS18 ;
+NET "ADC<15>"  LOC = "H2" | IOSTANDARD = LVCMOS18 ;
+NET "OVF"  LOC = "G3" | IOSTANDARD = LVCMOS18 ;
+#NET "OVFN"  LOC = "G1" | IOSTANDARD = LVCMOS18 ;
+NET "DCO"  LOC = "F2" | IOSTANDARD = LVCMOS18 ;
+#NET "DCON"  LOC = "F1" | IOSTANDARD = LVCMOS18 ;
+# ADC SPI port
+NET "ADCSCK" LOC = "E2" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+NET "ADCSDIO" LOC = "E1" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+NET "ADCCSN" LOC = "D1" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+# RX I/O connector
+NET "IO<5>" LOC = "C1" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "IO<6>" LOC = "C2" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "IO<7>" LOC = "B1" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "IO<8>" LOC = "B2" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+NET "IO<9>" LOC = "A2" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+# UART
+NET "URXD" LOC = "C3" | IOSTANDARD = LVCMOS33 ;
+NET "UTXD" LOC = "B3" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+NET "UTXE" LOC = "A3" | IOSTANDARD = LVCMOS33  | DRIVE = 2  | SLEW = SLOW ;
+
+#PACE: Start of PACE Area Constraints
+
+#PACE: Start of PACE Prohibit Constraints
+
+#PACE: End of Constraints generated by PACE

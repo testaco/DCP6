@@ -1,0 +1,18 @@
+# Output products list for <rom256x8gf256inv>
+_xmsgs\pn_parser.xmsgs
+dist_mem_gen_ds322.pdf
+dist_mem_gen_readme.txt
+rom256x8gf256inv.asy
+rom256x8gf256inv.gise
+rom256x8gf256inv.mif
+rom256x8gf256inv.ngc
+rom256x8gf256inv.sym
+rom256x8gf256inv.v
+rom256x8gf256inv.veo
+rom256x8gf256inv.vhd
+rom256x8gf256inv.vho
+rom256x8gf256inv.xco
+rom256x8gf256inv.xise
+rom256x8gf256inv_flist.txt
+rom256x8gf256inv_readme.txt
+rom256x8gf256inv_xmdf.tcl

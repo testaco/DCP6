@@ -1,0 +1,18 @@
+# Output products list for <rom16x22cordic>
+_xmsgs\pn_parser.xmsgs
+dist_mem_gen_ds322.pdf
+dist_mem_gen_readme.txt
+rom16x22cordic.asy
+rom16x22cordic.gise
+rom16x22cordic.mif
+rom16x22cordic.ngc
+rom16x22cordic.sym
+rom16x22cordic.v
+rom16x22cordic.veo
+rom16x22cordic.vhd
+rom16x22cordic.vho
+rom16x22cordic.xco
+rom16x22cordic.xise
+rom16x22cordic_flist.txt
+rom16x22cordic_readme.txt
+rom16x22cordic_xmdf.tcl

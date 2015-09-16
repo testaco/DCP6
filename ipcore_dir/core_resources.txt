@@ -1,0 +1,3 @@
+BRAMs: 2
+mults: 2
+
